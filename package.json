@@ -12,5 +12,8 @@
     "start": "npm run server && npm run start --prefix client"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0"
+  }
 }
