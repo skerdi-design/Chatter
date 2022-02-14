@@ -9,12 +9,12 @@ const path = require('path');
 const {DBconnect , findUser , authUser , getData , getAllData , addFriend , writeMSG} = require("./utils.js");
 
 
-const server = http.createServer(app);
+const server = http.createServer(app);// for production
 app.use(cors());
 
 const PORT = process.env.PORT || 3001;
 
-const io = require('socket.io')(server,{
+const io = require('socket.io')(server,{// server here was just 3002
     cors:{
         origin:[PORT]
     }

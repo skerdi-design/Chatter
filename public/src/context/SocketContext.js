@@ -8,8 +8,8 @@ export const SocketProvider = ({ id , children }) => {
 
   useEffect(()=>{
     if(id.length !== 0 && id !== false){
-      setSocket(io({query: { id:id } } ))
-    }else{
+      setSocket(io({query: { id:id } } ))//changed to this from setSocket(io('localhost:3002',{query: { id:id } } ))
+    }else{                               //for heroku
       socket && setSocket(prev=>{
         prev.close();
       })
