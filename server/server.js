@@ -10,9 +10,11 @@ const {DBconnect , findUser , authUser , getData , getAllData , addFriend , writ
 
 app.use(cors());
 
+const PORT = process.env.PORT || 3001;
+
 const io = require('socket.io')(3002,{
     cors:{
-        origin:['http://localhost:3001']
+        origin:[PORT]
     }
 })
 
