@@ -2,7 +2,7 @@
   "name": "react-chat-app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "build": "cd public && npm run build",
     "install-client": "cd public && npm install",
