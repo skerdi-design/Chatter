@@ -2,17 +2,19 @@ require("dotenv").config();
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const http = require('http');
 const bodyParser = require("body-parser");
 const session = require("client-sessions");
 const path = require('path');
 const {DBconnect , findUser , authUser , getData , getAllData , addFriend , writeMSG} = require("./utils.js");
 
 
+const server = http.createServer(app);
 app.use(cors());
 
 const PORT = process.env.PORT || 3001;
 
-const io = require('socket.io')(PORT,{
+const io = require('socket.io')(server,{
     cors:{
         origin:[PORT]
     }
@@ -134,7 +136,7 @@ DBconnect()
     .then((something)=>{
         if(something){
             const PORT = process.env.PORT || 3001;
-            app.listen(PORT,()=>{console.log(`server started at port ${PORT} along DB!!!`)});
+            server.listen(PORT,()=>{console.log(`server started at port ${PORT} along DB!!!`)});
         }
     })
     .catch((err)=>{
