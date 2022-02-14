@@ -68,7 +68,7 @@ app.use(express.static(path.resolve(__dirname, "../public/build")));
 app.use(session({
     cookieName:"session",
     secret:"cookieSecret12345",
-    duration:30*60*1000*2,//30 min
+    duration:30*60*1000*1.5,//30 min
     cookie: {
         path: '*', // cookie will only be sent to requests under '/api'
         ephemeral: false, // when true, cookie expires when the browser closes
