@@ -8,7 +8,7 @@ export const SocketProvider = ({ id , children }) => {
 
   useEffect(()=>{
     if(id.length !== 0 && id !== false){
-      setSocket(io('http://localhost:3002', {query: { id:id } } ))
+      setSocket(io('https://react-chatter-dev.herokuapp.com', {query: { id:id } } ))
     }else{
       socket && setSocket(prev=>{
         prev.close();
