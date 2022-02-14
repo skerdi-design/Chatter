@@ -8,8 +8,8 @@
     "install-client": "cd public && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",
     "server": "cd server && node server.js",
-    "develop": "npm run server && npm run start --prefix client\"",
-    "start": "npm run server && npm run start --prefix client\""
+    "develop": "npm run server && npm run start --prefix client",
+    "start": "npm run server && npm run start --prefix client"
   },
   "author": "",
   "license": "ISC"
