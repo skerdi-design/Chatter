@@ -1,0 +1,101 @@
+@import url('./Message.css');
+@import url('./TopNav.css');
+@import url('./Chat.css');
+@import url('./FindUser.css');
+@import url('./Login.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  user-select: none;
+}
+.flex_middle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body,html{
+  width: 100%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+#root{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.App{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.wraper_container{
+  width: 100%;
+  height: 100%;
+}
+.Wraper{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #DCDCDC;
+  /* max-width: 70em; */
+  /* margin-right: -1em;  mediaQuery after a curtain screen width*/
+}
+.Wraper.dark{
+  background: #1D1B24;
+}
+.chat_body{
+  width: 100%;
+  height: 90%;
+  display: flex;
+  overflow: hidden;
+}
+
+
+@media only screen and (max-width: 600px){
+  .login{font-size: 80%;}
+  
+  .Wraper{font-size: 80%;}
+  .chat_body{height: 92%;}
+
+  /*top nav section ==========================================================*/
+  .top_nav{height: 8%;}
+  .top_nav .parent .logo_section{min-width: 11em;}
+  .top_nav .parent .logout_section{min-width: 8em;width: 13em;}
+  .top_nav .parent .info_section{width: 75%;}
+
+  /*messages section =========================================================*/
+  .chat_body > .messages{min-width: 11em;}
+  .chat_body .messages .parent .text_section .text{font-size: 0.9em;}
+  .chat_body .messages .parent .messages_section .messages_wraper::-webkit-scrollbar{width: 3px;}
+  .chat_body .messages .parent .messages_section .messages_wraper .messages_auto .message{height: 3.6em;}
+  .chat_body .messages .parent .messages_section .messages_wraper .messages_auto .message.current .border{width: 3px;}
+  .chat_body .messages .parent .messages_section .messages_wraper .messages_auto .message .icon_holder{width: 35%;}
+  .chat_body .messages .parent .messages_section .messages_wraper .messages_auto .message .icon_holder .icon{width: 2.2em;height: 2.2em;}
+  .chat_body .messages .parent .messages_section .messages_wraper .messages_auto .message .info_holder{width: 72%;}
+  .chat_body .messages .parent .messages_section .messages_wraper .messages_auto .message .info_holder > div p{font-size: 0.82em;}
+  .chat_body .messages .parent .messages_section .messages_wraper .messages_auto .message .info_holder > div:nth-child(2) p{font-size: 0.72em;}
+
+  /*find-Users section =======================================================*/
+  .chat_body .find_users{min-width: 8em;width: 13em;}
+  .chat_body .find_users .parent .user_section .user_wraper{height: 60%;}
+  .chat_body .find_users .parent .user_section .user_wraper .icon_holder .icon{width: 4.4em;height: 4.4em;}
+
+  /*chat section ============================================================*/
+  .chat{width: 75%;}
+  .chat .messages .message{padding: 1em 0em 0.5em 0em;}
+  .chat .messages .message .icon_holder{width: 2.8em;height: 2.8em;}
+  .chat .messages .message.send .message_text{margin-right: 3.05em;}
+  .chat .messages .message.recived .message_text{margin-left: 3.2em;}
+  .chat .messages .message .message_text{min-width: 3.8em;}
+  .chat .messages .message .message_text > p{font-size: 0.9em;}
+  .chat .parent .typing_wraper .input_wraper .button_holder .button{min-width: 2.6em;min-height: 2.6em;border-radius: 0.6em;}
+}

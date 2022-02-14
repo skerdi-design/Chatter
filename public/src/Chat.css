@@ -1,0 +1,179 @@
+.chat{
+  width: 67%;
+  height: 100%;
+  display: flex;
+}
+.wraper_container.collapsed .chat{
+  width: 83%;
+}
+.chat .parent{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+.chat .parent .messages_wraper{
+  width: 100%;
+  height: 88%;
+  display: flex;
+  justify-content: center;
+}
+.chat .parent .messages_wraper .messages_holder{
+  width: 94%;
+  height: 100%;
+  overflow-y: auto;
+}
+.chat .parent .messages_wraper .messages_holder .messages{
+  width: 100%;
+  height: auto;
+}
+.chat .parent .messages_wraper .messages_holder::-webkit-scrollbar{
+  width: 0px;
+}
+
+
+.chat .messages .message.send{
+  align-items: flex-end;
+}
+.chat .messages .message.recived{
+  align-items: flex-start;
+}
+.chat .messages .message{
+  width: 100%;
+  min-height: 3em;
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 1em 0.5em 0.5em 0.5em;
+}
+.chat .messages .message.send .message_text{
+  margin-right: 3.5em;
+}
+.chat .messages .message.recived .message_text{
+  margin-left: 3.5em;
+}
+.chat .messages .message .message_text{
+  min-width: 2.8em;
+  width: auto;
+  max-width: 72%;
+  height: auto;
+  min-height: 3.2em;
+  margin-top: 0.5em;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.chat .messages .message .message_text:first-child{
+  margin-top: 0em;
+}
+.chat .messages .message .message_text > p{
+  background: white;
+  border-radius: 0.8em;
+  font-weight: 800;
+  color: rgb(65, 65, 65);
+  user-select: text;
+  padding: 0.55em 2.1em 1.05em 0.55em;
+  min-width: 4em;
+  min-height: 3em;
+}
+.chat.dark .messages .message .message_text > p{
+  background: #34313d;
+  color: #b3b3b3;
+}
+.chat .messages .message .message_text .message_time{
+  position: absolute;
+  right: 0.65em;
+  bottom: 1px;
+  transform: translateY(0%);
+  font-size: 0.72em;
+  font-weight: 800;
+  color: #727272;
+}
+.chat.dark .messages .message .message_text .message_time{
+  color: #808080;
+}
+
+
+.chat .messages .message .icon_holder{
+  width: 3em;
+  height: 3em;
+  position: absolute;
+}
+.chat .messages .message .icon_holder .icon{
+  width: 100%;
+  height: 100%;
+  border-radius: 0.6em;
+}
+
+
+
+
+
+
+.chat .parent .typing_wraper{
+  width: 100%;
+  height: 12%;
+  min-height: 4em;
+  display: flex;
+}
+.chat .parent .typing_wraper .input_wraper{
+  width: 92%;
+  height: 60%;
+  min-height: 3.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.7em;
+  background: white;
+}
+.chat.dark .parent .typing_wraper .input_wraper{
+  background: #2F2D38;
+}
+.chat .parent .typing_wraper .input_wraper .button_holder{
+  width: 11%;
+  height: 100%;
+  justify-self: end;
+}
+.chat .parent .typing_wraper .input_wraper .button_holder .button{
+  border: none;
+  min-width: 3.3em;
+  min-height: 3.3em;
+  border-radius: 0.7em;
+  margin-left: -0.3vw;
+  filter: drop-shadow(0px 0px 3px rgba(127, 35, 218,0.5));
+  background: #7F23DA;
+  cursor: pointer;
+}
+.chat.dark .parent .typing_wraper .input_wraper .button_holder .button{
+  background: #BD7AF1;
+  filter: drop-shadow(0px 0px 3px rgba(189, 122, 241,0.3));
+}
+.chat .parent .typing_wraper .input_wraper .button_holder .button .icon-svg{
+  color: white;
+  font-size: 1.5em;
+}
+
+
+.chat .parent .typing_wraper .input_wraper .input_holder{
+  width: 89%;
+  height: 100%;
+}
+.chat .parent .typing_wraper .input_wraper .input_holder input{
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0em 0.7em 0em 1.5em;
+  font-size: 1em;
+  color: #313131;
+  font-weight: 800;
+}
+.chat.dark .parent .typing_wraper .input_wraper .input_holder input{
+  color: #b9b9b9;
+}

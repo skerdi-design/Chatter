@@ -1,0 +1,258 @@
+.top_nav{
+  width: 100%;
+  height: 10.5%;
+  min-height: 4em;
+}
+.top_nav .parent{
+  width: 100%;
+  height: 99%;
+  background: white;
+  border-radius: 0em 0em 1em 0em;
+  display: flex;
+}
+.top_nav.dark .parent{
+  background: #2F2D38;
+}
+
+
+.top_nav .parent .logo_section{
+  min-width: 14em;
+  width: 18%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.wraper_container.collapsed .top_nav .parent .logo_section{
+  min-width: 4.2em;
+  width: 0%;
+}
+.top_nav .parent .logo_section .logo_wraper{
+  width: 40%;
+  height: 65%;
+  display: flex;
+  margin-left: 0.4em;
+}
+.top_nav .parent .logo_section .logo_wraper .icon_holder{
+  width: 40%;
+  height: 100%;
+}
+.wraper_container.collapsed .top_nav .parent .logo_section .logo_wraper .icon_holder{
+  width: 100%;
+}
+.top_nav .parent .logo_section .logo_wraper .icon_holder .icon{
+  width: 1.8em;
+  height: 1.8em;
+  border-radius: 0.35em;
+  background: #7F23DA;
+  filter: drop-shadow(0px 0px 3px rgba(127, 35, 218,0.5));
+}
+.top_nav.dark .parent .logo_section .logo_wraper .icon_holder .icon{
+  filter: drop-shadow(0px 0px 3px rgba(189, 122, 241,0.3));
+  background: #BD7AF1;
+}
+.top_nav .parent .logo_section .logo_wraper .icon_holder .icon .icon_svg{
+  color: white;
+  margin-bottom: -3px;
+  font-size: 0.8em;
+}
+.top_nav .parent .logo_section .logo_wraper .name_holder{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.top_nav .parent .logo_section .logo_wraper .name_holder .name{
+  font-size: 0.85em;
+  margin-left: 0.2em;
+  color: #7F23DA;
+  text-shadow: 0px 0px 2px rgba(127, 35, 218,0.5);
+  margin-bottom: -2px;
+}
+.wraper_container.collapsed .top_nav .parent .logo_section .logo_wraper .name_holder .name{
+  display: none;
+}
+.top_nav.dark .parent .logo_section .logo_wraper .name_holder .name{
+  color: #BD7AF1;
+  text-shadow: 0px 0px 2px rgba(189, 122, 241,0.3);
+}
+
+
+
+
+
+
+.top_nav .parent .info_section{
+  width: 67%;
+  height: 100%;
+  display: flex;
+}
+.wraper_container.collapsed .top_nav .parent .info_section{
+  width: 83%;
+}
+.top_nav .parent .info_section .current_messages{
+  width: 72%;
+  height: 100%;
+}
+.top_nav .parent .info_section .current_messages .current_wraper{
+  width: 85%;
+  height: 100%;
+  margin-left: 1.8vw;
+  display: flex;
+  align-items: center;
+}
+.top_nav .parent .info_section .current_messages .current_wraper .icon_holder{
+  width: 4.5em;
+  height: 100%;
+}
+.top_nav .parent .info_section .current_messages .current_wraper .icon_holder .icon{
+  width: 3.2em;
+  height: 3.2em;
+  /* background: #FFB697; */
+  border: 2px solid rgba(0,0,0,0.1);
+  border-radius: 0.7em;
+}
+.top_nav.dark .parent .info_section .current_messages .current_wraper .icon_holder .icon{
+  border: 2px solid rgba(255,255,255,0.1);
+}
+.top_nav .parent .info_section .current_messages .current_wraper .username_holder{
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.top_nav .parent .info_section .current_messages .current_wraper .username_holder .username{
+  font-size: 1.1em;
+  font-weight: 800;
+  color: #383838;
+  text-shadow: 0px 0px 2px rgba(56, 56, 56, 0.2);
+}
+.top_nav.dark .parent .info_section .current_messages .current_wraper .username_holder .username{
+  color: #a1a1a1;
+  text-shadow: 0px 0px 2px rgba(161, 161, 161, 0.2);
+}
+
+
+.top_nav .parent .info_section .options{
+  width: 28%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.top_nav .parent .info_section .options .toggle_holder{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.top_nav .parent .info_section .options .toggle_holder input{
+  display: none;
+}
+.top_nav .parent .info_section .options .toggle_holder .option{
+  min-width: 4.75em;
+  height: 1.8em;
+  border-radius: 0.35em;
+  background: #dadada;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  margin-right: 2em;
+  /* border: 1px solid red; */
+}
+.top_nav.dark .parent .info_section .options .toggle_holder .option{
+  background: #454251;
+  box-shadow: 0px 0px 4px 0px rgba(69, 66, 81, 0.8);
+}
+.top_nav .parent .info_section .options .toggle_holder .option .switch{
+  width: 1.8em;
+  height: 1.8em;
+  border-radius: 0.35em;
+  background: #7F23DA;
+  filter: drop-shadow(0px 0px 2px rgba(127, 35, 218,0.5));
+  pointer-events: none;
+  transform: scale(0.8) translateX(6%);
+  transform-origin: center;
+  transition: transform 0.2s cubic-bezier(0.7, 0.01, 0.37, 1);
+}
+.top_nav .parent .info_section .options .toggle_holder input:checked ~ .option .switch{
+  background: #BD7AF1;
+  filter: drop-shadow(0px 0px 3px rgba(189, 122, 241,0.3));
+  transform: scale(0.8) translateX(200%);
+}
+.top_nav .parent .info_section .options .toggle_holder .option .switch .icon-svg{
+  color: white;
+}
+
+
+
+
+
+
+
+.top_nav .parent .logout_section{
+  min-width: 11em;
+  width: 14.5em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.top_nav .parent .logout_section .logout_wraper{
+  width: 60%;
+  height: 70%;
+  display: flex;
+  margin-right: 0.5em;
+  cursor: pointer;
+}
+.top_nav .parent .logout_section .logout_wraper .icon_holder{
+  width: 35%;
+  height: 100%;
+}
+.top_nav .parent .logout_section .logout_wraper .icon_holder .icon{
+  width: 1.95em;
+  height: 1.95em;
+  border-radius: 0.4em;
+  background: #7F23DA;
+  filter: drop-shadow(0px 0px 3px rgba(127, 35, 218,0.5));
+}
+.top_nav .parent .logout_section .logout_wraper:hover .icon_holder .icon{
+  background: #7119ca;
+}
+.top_nav.dark .parent .logout_section .logout_wraper .icon_holder .icon{
+  filter: drop-shadow(0px 0px 3px rgba(189, 122, 241,0.3));
+  background: #BD7AF1;
+}
+.top_nav.dark .parent .logout_section .logout_wraper:hover .icon_holder .icon{
+  background: #a962e0;
+}
+.top_nav .parent .logout_section .logout_wraper .icon_holder .icon .icon_svg{
+  color: white;
+  font-size: 1.15em;
+  margin-left: -4px;
+}
+.top_nav .parent .logout_section .logout_wraper .name_holder{
+  width: 65%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.top_nav .parent .logout_section .logout_wraper .name_holder .name{
+  font-size: 0.95em;
+  margin-right: 0.25em;
+  color: #7F23DA;
+  text-shadow: 0px 0px 2px rgba(127, 35, 218,0.5);
+}
+.top_nav .parent .logout_section .logout_wraper:hover .name_holder .name{
+  color: #7119ca;
+}
+.top_nav.dark .parent .logout_section .logout_wraper .name_holder .name{
+  text-shadow: 0px 0px 2px rgba(189, 122, 241,0.3);
+  color: #BD7AF1;
+}
+.top_nav.dark .parent .logout_section .logout_wraper:hover .name_holder .name{
+  color: #a35bda;
+}
+
