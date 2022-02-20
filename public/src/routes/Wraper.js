@@ -27,7 +27,6 @@ const Wraper = ({updateConnection,updateSocket}) =>{
       getUserData(result);
       updateConnection(result.docs.id);
     }
-    console.log(result,error,isLoading);
   },[result,error,isLoading])
   if(error) return <div>{error}</div>
   if(!socket || isLoading) return <div>Loading!!!</div>

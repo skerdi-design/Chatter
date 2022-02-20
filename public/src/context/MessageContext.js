@@ -146,8 +146,8 @@ export const MessageProvider = ({ children }) => {
 
 
   const _setMessages = (data) => {
-    messagesRef.current = data;
-    setMessages(data);
+    messagesRef.current.push(data);
+    setMessages(messagesRef.current);
   }
   const displayMessage = ({sentFrom,recipient,msg,time}) => {
     let textObj = {
@@ -160,13 +160,13 @@ export const MessageProvider = ({ children }) => {
       text:[textObj]
     }
     if(recipient.id === USER.id){//sent to me!!!
-      console.log('sent to me!!!');
+      // console.log('sent to me!!!');
       let newArr = [...messagesRef.current];
       let index = messagesRef.current.findIndex(item=>{
         return item.id === sentFrom.id
       })
       if(index === -1){
-        console.log('no user found');
+        // console.log('no user found');
         let tempUser = {
           username:sentFrom.username,
           id:sentFrom.id,
@@ -180,7 +180,7 @@ export const MessageProvider = ({ children }) => {
             return item.id !== sentFrom.id
           })
         })
-        _setMessages([tempUser])
+        _setMessages(tempUser)
       }else{
         if(newArr[index].conversation.length === 0){
           newArr[index].conversation.push(msgObj);
