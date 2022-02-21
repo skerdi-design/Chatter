@@ -99,3 +99,7 @@ body,html{
   .chat .messages .message .message_text > p{font-size: 0.9em;}
   .chat .parent .typing_wraper .input_wraper .button_holder .button{min-width: 2.6em;min-height: 2.6em;border-radius: 0.6em;}
 }
+
+@media only screen and (min-width: 2500px){
+  .chat_body .find_users{max-width: 22em;}
+}
