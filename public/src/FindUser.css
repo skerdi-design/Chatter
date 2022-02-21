@@ -1,7 +1,7 @@
 .chat_body .find_users{
   min-width: 11em;
-  width: 18%;
-  max-width: 19em;
+  width: 15%;
+  max-width: 16em;
   height: 100%;
   display: flex;
   align-items: flex-end;
